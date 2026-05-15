@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudakshina Bhattacharjee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Starfield Canvas -->
+  <canvas id="starfield"></canvas>
+
+  <!-- Aurora Blobs -->
+  <div class="aurora">
+    <div class="aurora-blob blob-1"></div>
+    <div class="aurora-blob blob-2"></div>
+    <div class="aurora-blob blob-3"></div>
+  </div>
+
+  <!-- ── Navigation ──────────────────────────── -->
+  <header id="header">
+    <a href="#top" class="logo">
+      <span class="logo-sigil">Sudakshina</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#exploring" class="nav-link">Exploring</a></li>
+        <li><a href="#achievements" class="nav-link">Wins</a></li>
+        <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ── Hero ───────────────────────────────── -->
+  <section class="hero" id="top">
+    <div class="hero-content reveal">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Sudakshina<span class="name-dot">.</span></h1>
+      <h2 class="hero-tagline">
+        I'm <span class="typewriter" id="typewriter"></span><span class="type-cursor">|</span>
+      </h2>
+      <p class="hero-bio">
+        Somewhere between backend systems, mathematics, and late-night curiosity, 
+        I found myself drawn toward artificial intelligence. 
+        Right now, I’m learning by building — slowly, intentionally, and one small project at a time.
+      </p>
+      <div class="hero-actions">
+        <a href="#experience" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/sudakshina27" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/sudakshina-bhattacharjee/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:sudakshina.bhatt@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-currently reveal reveal-delay">
+      <span class="currently-label">Currently</span>
+      <div class="currently-items">
+        <div class="currently-item">
+          <i class="fas fa-graduation-cap"></i>
+          <span>Studying MSc AI Engineering · Universität Passau</span>
+        </div>
+        <div class="currently-item">
+          <i class="fas fa-brain"></i>
+          <span>Exploring the landscape of artificial intelligence</span>
+        </div>
+        <div class="currently-item">
+          <i class="fas fa-music"></i>
+          <span>Singing, cooking elaborate meals, chasing sunsets</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── About ──────────────────────────────── -->
+  <section class="about-section section" id="about">
+    <div class="section-inner">
+      <div class="section-label reveal">About</div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 class="section-title">Learning to build things that feel <em>quietly meaningful.</em></h2>
+          <p>I’ve always been drawn to understanding how things work beneath the surface — whether that meant mathematics, systems, music, or pieces of code that refused to cooperate.</p>
+          <p>I started my career working with backend systems and Salesforce at Deloitte, where I spent time building APIs, solving operational problems, and contributing to internal tools used at scale. Somewhere along the way, I found myself growing curious about AI, not just the technology itself, but the strange and fascinating ways humans are trying to teach machines to think.</p>
+          <p>Right now, I’m pursuing a Master’s in Artificial Intelligence Engineering and learning as I go — slowly, properly, and with intention. I don’t know everything yet, and I think that’s what makes this phase exciting.</p>
+          <p>Lately, I’ve been interested in building small projects that teach me something in return. Things that are useful, a little personal, and occasionally experimental.</p>
+          <p>Outside of tech, I spend a lot of time singing, reading fiction, working out, and disappearing for sunsets whenever I can.</p>
+        </div>
+        <div class="about-visual reveal reveal-right">
+          <div class="about-photo-frame">
+            <img src="mypic.jpg" alt="Sudakshina" class="about-photo" />
+            <div class="photo-glow"></div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">2+</span>
+              <span class="stat-label">Years at Deloitte</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5K+</span>
+              <span class="stat-label">Users Impacted</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4×</span>
+              <span class="stat-label">Award Winner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Education ──────────────────────────── -->
+  <section class="education-section section" id="education">
+    <div class="section-inner">
+      <div class="section-label reveal">Education</div>
+      <h2 class="section-title reveal">Academic Journey</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-node">
+            <div class="node-ring upcoming-node"></div>
+          </div>
+          <div class="timeline-card glass-card">
+            <div class="card-badge upcoming-badge">Apr 2026 - Present</div>
+            <h3>Master of Science in Artificial Intelligence Engineering</h3>
+            <p class="institution"><i class="fas fa-university"></i> Universität Passau, Germany</p>
+            <p class="coursework"><strong>Coursework:</strong> Financial Data Analytics &amp; Machine Learning · Network Science · Software Analysis · Multimedia Databases</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-node">
+            <div class="node-ring"></div>
+          </div>
+          <div class="timeline-card glass-card">
+            <div class="card-badge">2018 – 2023</div>
+            <h3>Integrated MSc. in Mathematics &amp; Computing</h3>
+            <p class="institution"><i class="fas fa-university"></i> Birla Institute of Technology, Mesra, India</p>
+            <!-- <p class="grade">CGPA: <span class="accent">x.0</span></p> -->
+            <p class="coursework"><strong>Coursework:</strong> Probability &amp; Statistics · Linear Algebra · Data Structures &amp; Algorithms · Database Management Systems · Data Mining &amp; Warehousing · Cloud Computing · Network Security &amp; Cryptography</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Experience ─────────────────────────── -->
+  <section class="experience-section section" id="experience">
+    <div class="section-inner">
+      <div class="section-label reveal">Experience</div>
+      <h2 class="section-title reveal">Work Experience</h2>
+
+      <div class="exp-company-header reveal glass-card">
+        <div class="exp-company-info">
+          <h3 class="company-name">Deloitte USI (India - Offices of the US)</h3>
+          <p class="company-location"><i class="fas fa-map-marker-alt"></i> Mumbai, India</p>
+          <p class="company-desc">Worked on Jupiter, Deloitte's internal global CRM platform built on Salesforce, used by consulting teams to manage client relationships, engagements, and business development workflows.</p>
+        </div>
+        <span class="company-role-tag">Analyst</span>
+      </div>
+
+      <div class="roles-grid">
+
+        <div class="role-card glass-card reveal">
+          <div class="role-header">
+            <h4>Backend Development</h4>
+            <span class="role-period">Jul 2024 – Sep 2025</span>
+          </div>
+          <ul class="role-bullets">
+            <li><strong>Agentic AI Chatbot (DOTi/Agentforce):</strong> Contributed to the integration and deployment of DOTi, <span class="accent">Deloitte's AI assistant</span> built on Agentforce, by integrating a Salesforce chatbot that automated repetitive workflows.</li>
+            <li><strong>Relationship 360 Mobile App:</strong> Designed and implemented <span class="accent">20+ Apex REST classes</span> and custom API endpoints for dynamic Salesforce data retrieval.</li>
+            <li><strong>Push Notification System:</strong> Built a configurable push-notification system serving <span class="accent">5,000+ PPMD users</span> across Deloitte US.</li>
+            <li><strong>Jupiter Homepage Redesign:</strong> Managed <span class="accent">50+ pull requests</span> across Apex classes, Lightning components, and metadata.</li>
+          </ul>
+        </div>
+
+        <div class="role-card glass-card reveal">
+          <div class="role-header">
+            <h4>DevOps – Salesforce Platform</h4>
+            <span class="role-period">Feb 2024 – Jun 2024</span>
+          </div>
+          <ul class="role-bullets">
+            <li>Maintained stability of the <span class="accent">Jupiter Salesforce production environment</span> by resolving <span class="accent">10+ critical incidents weekly</span>.</li>
+            <li>Performed <span class="accent">root-cause analyses</span> and deployed <span class="accent">targeted fixes</span>.</li>
+            <li>Translated complex business requirements into actionable technical tasks.</li>
+          </ul>
+        </div>
+
+        <div class="role-card glass-card reveal">
+          <div class="role-header">
+            <h4>Salesforce User Provisioning</h4>
+            <span class="role-period">Jul 2023 – Jan 2024</span>
+          </div>
+          <ul class="role-bullets">
+            <li>Managed user access for Jupiter CRM, ensuring permissions aligned with organizational hierarchy.</li>
+            <li>Processed <span class="accent">25+ daily access requests</span> and handled <span class="accent">140+ monthly operational tasks</span>.</li>
+            <li>Created and maintained documentation for user access procedures.</li>
+          </ul>
+        </div>
+
+        <div class="role-card glass-card reveal">
+          <div class="role-header">
+            <h4>Business Technical Analyst Intern</h4>
+            <span class="role-period">Jan 2023 – Jun 2023</span>
+          </div>
+          <ul class="role-bullets">
+            <li>Improved code quality within Jupiter's Salesforce environment, achieving <span class="accent">85% code coverage</span> through enhanced test classes and documentation.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Skills ─────────────────────────────── -->
+  <section class="skills-section section" id="skills">
+    <div class="section-inner">
+      <div class="section-label reveal">Skills</div>
+      <h2 class="section-title reveal">My Tech Stack</h2>
+      <div class="skills-constellation reveal">
+
+        <div class="skill-cluster">
+          <div class="cluster-title"><i class="fas fa-chart-bar"></i> Data Analysis</div>
+          <div class="skill-pills">
+            <span class="skill-pill" data-level="Proficient">SQL</span>
+            <span class="skill-pill" data-level="Intermediate">Python</span>
+            <span class="skill-pill" data-level="Proficient">Microsoft Excel</span>
+          </div>
+        </div>
+
+        <div class="skill-cluster">
+          <div class="cluster-title"><i class="fas fa-chart-pie"></i> Data Visualization</div>
+          <div class="skill-pills">
+            <span class="skill-pill" data-level="Intermediate">Microsoft PowerBI</span>
+          </div>
+        </div>
+
+        <div class="skill-cluster">
+          <div class="cluster-title"><i class="fas fa-cloud"></i> CRM &amp; Backend</div>
+          <div class="skill-pills">
+            <span class="skill-pill" data-level="Advanced">Salesforce</span>
+            <span class="skill-pill" data-level="Advanced">Apex</span>
+            <span class="skill-pill" data-level="Proficient">SOQL</span>
+            <span class="skill-pill" data-level="Proficient">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="skill-cluster">
+          <div class="cluster-title"><i class="fas fa-code"></i> Web &amp; Dev</div>
+          <div class="skill-pills">
+            <span class="skill-pill" data-level="Intermediate">HTML</span>
+            <span class="skill-pill" data-level="Intermediate">CSS</span>
+            <span class="skill-pill" data-level="Intermediate">JavaScript</span>
+            <span class="skill-pill" data-level="Intermediate">Java</span>
+          </div>
+        </div>
+        
+        <div class="skill-cluster">
+          <div class="cluster-title"><i class="fas fa-brain"></i> AI Exploration</div>
+          <div class="skill-pills">
+            <span class="skill-pill">LLM experimentation</span>
+            <span class="skill-pill">Prompt-based workflows</span>
+            <span class="skill-pill">AI-assisted coding</span>
+          </div>
+        </div>
+
+        <div class="skill-cluster">
+          <div class="cluster-title"><i class="fas fa-lightbulb"></i> Product &amp; Strategy</div>
+          <div class="skill-pills">
+            <span class="skill-pill" data-level="Advanced">Problem Solving</span>
+            <span class="skill-pill" data-level="Advanced">Analytical Thinking</span>
+            <span class="skill-pill" data-level="Proficient">Technical Documentation</span>
+            <span class="skill-pill" data-level="Proficient">User Story Analysis</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="skill-tooltip" id="skill-tooltip"></div>
+    </div>
+  </section>
+
+    <!-- ── Currently Exploring ───────────────── -->
+  <section class="exploring-section section" id="exploring">
+    <div class="section-inner">
+      <div class="section-label reveal">In Progress</div>
+      <h2 class="section-title reveal">Things I'm Exploring</h2>
+
+      <p class="exploring-intro reveal">
+        Right now, I'm spending most of my time learning through experimentation, trying to 
+        strengthen my foundations while building small things along the way.
+      </p>
+
+      <div class="explore-grid">
+
+        <div class="explore-item glass-card reveal">
+          <div class="explore-icon"><i class="fas fa-brain"></i></div>
+          <span class="explore-title">Artificial Intelligence</span>
+          <p>Trying to understand how intelligent systems learn, reason, and interact with people.</p>
+        </div>
+
+        <div class="explore-item glass-card reveal">
+          <div class="explore-icon"><i class="fas fa-hammer"></i></div>
+          <span class="explore-title">Building Small Things</span>
+          <p>Building lightweight apps and tools that help me learn by doing, because nothing teaches like shipping something real.</p>
+        </div>
+
+        <div class="explore-item glass-card reveal">
+          <div class="explore-icon"><i class="fas fa-wave-square"></i></div>
+          <span class="explore-title">Data &amp; Patterns</span>
+          <p>Exploring how data can tell stories through analysis and visualization. Especially drawn to the intersection of statistics and meaning.</p>
+        </div>
+
+        <div class="explore-item glass-card reveal">
+          <div class="explore-icon"><i class="fas fa-palette"></i></div>
+          <span class="explore-title">Creative Technology</span>
+          <p>Interested in projects that sit somewhere between logic, design, and human experience.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects ───────────────────────────── -->
+  <section class="projects-section section" id="projects">
+    <div class="section-inner">
+      <div class="section-label reveal">Projects</div>
+      <h2 class="section-title reveal">Things I've Built</h2>
+      <div class="projects-grid">
+        
+        <div class="project-card glass-card reveal">
+          <div class="project-number">01</div>
+          <div class="project-body">
+            <h3>Water Reminder App</h3>
+            <p>A simple and lightweight web app that reminds users to drink water every 2 hours. It sends browser notifications and shows a live countdown timer to the next reminder.</p>
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span>JavaScript</span>
+              <span>Browser Notifications</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/sudakshina27/water-reminder-app" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://sudakshina27.github.io/water-reminder-app/" target="_blank" title="Live Site">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-number">02</div>
+          <div class="project-body">
+            <h3>Data Analysis for an E-Commerce Start-up</h3>
+            <p>Analyzed website traffic and conversion funnels using SQL to optimize the customer purchase journey. Evaluated product sales, cross-selling patterns, and refund rates, and identified <span class="accent">top 10%</span> customers and their acquisition channels.</p>
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span>SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="project-number">03</div>
+          <div class="project-body">
+            <h3>Retail Analytics for a Global Manufacturing Company</h3>
+            <p>Built KPIs and dashboards from online purchase data to track AOV, ARPU, and sales metrics. Analyzed category-wise sales and suggested revenue growth through up-selling and cross-selling.</p>
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span>Microsoft PowerBI</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Publications ───────────────────────── -->
+  <section class="publications-section section" id="publications">
+    <div class="section-inner">
+      <div class="section-label reveal">Research</div>
+      <h2 class="section-title reveal">Publications</h2>
+      <div class="pub-card glass-card reveal">
+        <div class="pub-icon-wrap">
+          <i class="fas fa-book-open"></i>
+        </div>
+        <div class="pub-body">
+          <span class="pub-tag">Book Chapter · 2024</span>
+          <h3>Lata Mangeshkar: A Biographical and Scientific Study</h3>
+          <p>Contributed to a research chapter applying <span class="accent">probability theory</span> and <span class="accent">statistical analysis</span> to study patterns in Lata Mangeshkar's solo songs across multiple decades. This project combined my interests in mathematics, music, and data-driven exploration.</p>
+          <p class="pub-authors"><i class="fas fa-user"></i> Sudakshina Bhattacharjee, Dr. Soubhik Chakraborty</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Achievements ───────────────────────── -->
+  <section class="achievements-section section" id="achievements">
+    <div class="section-inner">
+      <div class="section-label reveal">Recognition</div>
+      <h2 class="section-title reveal">Achievements</h2>
+      <div class="achievements-grid">
+
+        <div class="achievement-card glass-card reveal">
+          <div class="ach-header">
+            <div class="ach-icon"><i class="fas fa-star"></i></div>
+            <span class="ach-date">Aug 2025</span>
+          </div>
+          <h4 class="ach-award">Spot Award</h4>
+          <span class="ach-org">Deloitte USI</span>
+          <p>Acknowledged for development skills and strict adherence to committed timelines, and for analysing user stories holistically.</p>
+        </div>
+
+        <div class="achievement-card glass-card reveal">
+          <div class="ach-header">
+            <div class="ach-icon trophy"><i class="fas fa-trophy"></i></div>
+            <span class="ach-date">Feb 2025</span>
+          </div>
+          <h4 class="ach-award">Applause Award</h4>
+          <span class="ach-org">Deloitte USI</span>
+          <p>Recognized for contributions to the Relationship 360 App, showcased at Salesforce's <em>Dreamforce</em> and rolled out to <span class="accent">5,000+ Deloitte US PPMDs</span>.</p>
+        </div>
+
+        <div class="achievement-card glass-card reveal">
+          <div class="ach-header">
+            <div class="ach-icon"><i class="fas fa-star"></i></div>
+            <span class="ach-date">Sep 2024</span>
+          </div>
+          <h4 class="ach-award">Spot Award</h4>
+          <span class="ach-org">Deloitte USI</span>
+          <p>Recognized as a key resource in the US Steady State Team for efficiently handling user configuration, resolving incidents, and addressing design gap user stories.</p>
+        </div>
+
+        <div class="achievement-card glass-card reveal">
+          <div class="ach-header">
+            <div class="ach-icon"><i class="fas fa-star"></i></div>
+            <span class="ach-date">Jan 2024</span>
+          </div>
+          <h4 class="ach-award">Spot Award</h4>
+          <span class="ach-org">Deloitte USI</span>
+          <p>Acknowledged for ownership of Jupiter User Provisioning, managing approvals, documentation, and ensuring compliance.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ────────────────────────────── -->
+  <section class="contact-section section" id="contact">
+    <div class="section-inner">
+      <div class="section-label reveal">Contact</div>
+      <h2 class="section-title reveal">Get in Touch</h2>
+      <p class="contact-sub reveal">I'm always open to conversations about technology, learning, creative ideas, or interesting projects — especially ones that help me grow as a builder and engineer.</p>
+      <div class="contact-grid reveal">
+
+        <a href="mailto:sudakshina.bhatt@gmail.com" class="contact-card glass-card">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-info">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">sudakshina.bhatt@gmail.com</span>
+          </div>
+          <i class="fas fa-arrow-right contact-arrow"></i>
+        </a>
+
+        <a href="tel:+4915215830656" class="contact-card glass-card">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div class="contact-info">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">+49 152 15830656</span>
+          </div>
+          <i class="fas fa-arrow-right contact-arrow"></i>
+        </a>
+
+        <a href="https://linkedin.com/in/sudakshina-bhattacharjee" target="_blank" class="contact-card glass-card">
+          <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+          <div class="contact-info">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">sudakshina-bhattacharjee</span>
+          </div>
+          <i class="fas fa-arrow-right contact-arrow"></i>
+        </a>
+
+        <a href="https://github.com/sudakshina27" target="_blank" class="contact-card glass-card">
+          <div class="contact-icon"><i class="fab fa-github"></i></div>
+          <div class="contact-info">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">sudakshina27</span>
+          </div>
+          <i class="fas fa-arrow-right contact-arrow"></i>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy"><i class="fas fa-code"></i> <strong>Sudakshina</strong> © 2026</span>
+      <span class="footer-made">Built slowly, thoughtfully, and with occasional help from AI.</span>
+      <div class="footer-socials">
+        <a href="https://github.com/sudakshina27" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/sudakshina-bhattacharjee" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
